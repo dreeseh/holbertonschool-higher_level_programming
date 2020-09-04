@@ -3,7 +3,7 @@ if __name__ == "__main__":
     from sys import argv
     n = len(argv)
     if n == 1:
-        print("0: arguments.")
+        print("{} arguments.".format(n - 1))
     elif n == 2:
         print("{:d} argument:".format(n - 1))
     else:
