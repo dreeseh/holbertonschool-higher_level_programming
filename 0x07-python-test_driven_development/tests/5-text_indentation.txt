@@ -37,59 +37,49 @@ Quae animi affectio suum cuique tribuens atque hanc, quam dico.
 <BLANKLINE>
 Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
->>> text_indentation("""   Hello.    Today   ?   Is a good:    Day""")
-Hello.
+>>> text_indentation("""Hel.lo how are yo?u today?""")
+Hel.
 <BLANKLINE>
-Today ?
+o how are yo?
 <BLANKLINE>
-Is a good:
-<BLANKLINE>
-Day
-
->>> text_indentation("""        Hello, Today? Is a good: Day""")
-Hello, Today?
-<BLANKLINE>
-Is a good:
-<BLANKLINE>
-Day
-
->>> text_indentation("""....""")
-.
-<BLANKLINE>
-.
-<BLANKLINE>
-.
-<BLANKLINE>
-.
-<BLANKLINE>
+ today?
 <BLANKLINE>
 
->>> text_indentation(4)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/5-text_indentation.py", line 18, in text_indentation
-    raise TypeError('text must be a string')
-TypeError: text must be a string
+>>> text_indentation("""    Hello how are you""")
+    Hello how are you
 
->>> text_indentation("""Hello Today Is a Good Day """)
-Hello Today Is a Good Day
+>>> text_indentation("""   Hello?   How?   Are.   you    :""")
+   Hello?
+<BLANKLINE>
+  How?
+<BLANKLINE>
+  Are.
+<BLANKLINE>
+  you    :
+<BLANKLINE>
 
 >>> text_indentation()
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: text_indentation() missing 1 required positional argument: 'text'
 
->>> text_indentation("""Hello today""" """Is a good day""")
-Hello todayIs a good day
+>>> text_indentation("""""")
 
->>> text_indentation("""Hello today""", """Is a good day""")
+>>> text_indentation(None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/5-text_indentation.py", line 16, in text_indentation
+    raise TypeError('text must be a string')
+TypeError: text must be a string
+
+>>> text_indentation(23)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/5-text_indentation.py", line 16, in text_indentation
+    raise TypeError('text must be a string')
+TypeError: text must be a string
+
+>>> text_indentation(4, 4)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: text_indentation() takes 1 positional argument but 2 were given
-
->>> text_indentation(True)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/5-text_indentation.py", line 18, in text_indentation
-    raise TypeError('text must be a string')
-TypeError: text must be a string
