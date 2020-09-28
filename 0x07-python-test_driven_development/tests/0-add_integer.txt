@@ -9,6 +9,9 @@
 >>> add_integer(-1, -1)
 -2
 
+>>> add_integer(1, -1.1)
+0
+
 >>> add_integer(2)
 100
 
