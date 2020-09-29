@@ -21,7 +21,7 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        if (self.__height == 0 or self.__width == 0):
+        if (self.__height is 0 or self.__width is 0):
             return 0
         else:
             return ((self.__width * 2) + (self.__height * 2))
@@ -51,9 +51,9 @@ class Rectangle:
         self.__height = value
 
     def __str__(self):
-        if self.height == 0 or self.width == 0:
-            return
         hash_tag = ""
+        if self.height == 0 or self.width == 0:
+            return hash_tag
         for i in range(self.height):
             for j in range(self.width):
                 hash_tag += "#"
