@@ -8,23 +8,32 @@ class TestMaxInteger(unittest.TestCase):
     def test_normal_use(self):
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
 
-    def no_input(self):
+    def test_max_at_beginning(self):
+        self.assertEqual(max_integer([4, 3, 2, 1]), 4)
+
+    def test_no_input(self):
         self.assertFalse(max_integer())
 
-    def empty_list(self):
+    def test_empty_list(self):
         self.assertFalse(max_integer([]))
 
-    def negative_list(self):
+    def test_negative_list(self):
         self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
 
-    def dups_in_list(self):
+    def test_dups_in_list(self):
         self.assertEqual(max_integer([1, 2, 4, 4]), 4)
 
-    def only_one_input(self):
+    def test_only_one_input(self):
         self.assertEqual(max_integer([4]), 4)
 
     def test_for_long_int(self):
         self.assertEqual
+
+    def test_max_is_middle(self):
+        self.assertEqual(max_integer([1, 3, 2]), 3)
+
+    def test_one_neg_number(self):
+        self.assertEqual(max_integer[1, -1, 2], 2)
 
     @unittest.expectedFailure
     def no_int_in_list(self):
