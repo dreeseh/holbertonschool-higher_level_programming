@@ -33,7 +33,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1, 3, 2]), 3)
 
     def test_one_neg_number(self):
-        self.assertEqual(max_integer[1, -1, 2], 2)
+        self.assertEqual(max_integer([1, -1, 2], 2)
 
     @unittest.expectedFailure
     def no_int_in_list(self):
