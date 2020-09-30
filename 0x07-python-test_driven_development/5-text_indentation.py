@@ -24,11 +24,9 @@ def text_indentation(text):
         begin = 0
         print(text[counter], end="")
         if text[counter] in ".?:":
-            print()
+            print("")
+            print("")
             begin = 1
-
-
-
 """
     i = 0
     while i < len(text):
