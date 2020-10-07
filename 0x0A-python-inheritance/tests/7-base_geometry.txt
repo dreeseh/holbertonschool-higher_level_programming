@@ -37,6 +37,11 @@ Traceback (most recent call last):
     raise TypeError("{:s} must be an integer".format(name))
 TypeError: bool must be an integer
 
+>>> bg.integer_validator("complex", complex(2,2))
+Traceback (most recent call last):
+...
+TypeError: complex must be an integer
+
 >>> bg.integer_validator("float", 4.4)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
