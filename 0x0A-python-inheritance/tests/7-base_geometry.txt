@@ -14,6 +14,11 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: area() takes 1 positional argument but 2 were given
 
+>>> bg.area(reese)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'reese' is not defined
+
 >>> bg.integer_validator("integer", 0)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
