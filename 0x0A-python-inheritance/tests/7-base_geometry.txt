@@ -30,6 +30,13 @@ ValueError: integer must be greater than 0
 
 bg.integer_validator("distance", 1)
 
+>>> bg.integer_validator("integer", 4.4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 20, in integer_validator
+    raise TypeError("{:s} must be an integer".format(name))
+TypeError: integer must be an integer
+
 >>> bg.integer_validator("integer", -4)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
