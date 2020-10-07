@@ -3,6 +3,7 @@
 module of BaseGeometry()
 """
 
+
 class BaseGeometry():
     """
     a class BaseGeometry
@@ -20,6 +21,7 @@ class BaseGeometry():
 
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
+
 
 class Rectangle(BaseGeometry):
     """ class Rectangle inherited from BaseGeometry """
