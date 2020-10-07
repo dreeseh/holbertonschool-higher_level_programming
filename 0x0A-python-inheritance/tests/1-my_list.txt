@@ -19,6 +19,12 @@
 >>> print(my_list)
 [1, 2, 3, 5]
 
+>>> MyList.print_sorted([4, 3, 2, 1])
+[1, 2, 3, 4]
+
+>>> MyList.print_sorted([-4, -3, -2, -1])
+[-4, -3, -2, -1]
+
 >>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(4)
@@ -52,3 +58,4 @@ True
 
 >>> type(my_list) is MyList
 True
+
