@@ -1,0 +1,120 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+
+>>> bg.area()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 14, in area
+    raise Exception('area() is not implemented')
+Exception: area() is not implemented
+
+>>> bg.area(2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: area() takes 1 positional argument but 2 were given
+
+>>> bg.integer_validator("integer", 0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 22, in integer_validator
+    raise ValueError("{:s} must be greater than 0".format(name))
+ValueError: integer must be greater than 0
+
+>>> bg.integer_validator("integer", 4)
+
+>>> bg.integer_validator("integer", -4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 22, in integer_validator
+    raise ValueError("{:s} must be greater than 0".format(name))
+ValueError: integer must be greater than 0
+
+>>> bg.integer_validator("bool", True)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 19, in integer_validator
+    raise TypeError("{:s} must be an integer".format(name))
+TypeError: bool must be an integer
+
+>>> bg.integer_validator("float", 4.4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 19, in integer_validator
+    raise TypeError("{:s} must be an integer".format(name))
+TypeError: float must be an integer
+
+>>> bg.integer_validator("string", "reese")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 19, in integer_validator
+    raise TypeError("{:s} must be an integer".format(name))
+TypeError: string must be an integer
+
+>>> bg.integer_validator("list", [1, 2, 3, 4])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 19, in integer_validator
+    raise TypeError("{:s} must be an integer".format(name))
+TypeError: list must be an integer
+
+>>> bg.integer_validator("tuple", (4, 5))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 19, in integer_validator
+    raise TypeError("{:s} must be an integer".format(name))
+TypeError: tuple must be an integer
+
+>>> bg.integer_validator("dict", {"key": "value"})
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 19, in integer_validator
+    raise TypeError("{:s} must be an integer".format(name))
+TypeError: dict must be an integer
+
+>>> bg.integer_validator("set", {"key", "value"})
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 19, in integer_validator
+    raise TypeError("{:s} must be an integer".format(name))
+TypeError: set must be an integer
+
+>>> bg.integer_validator("frozenset", frozenset(["reese", "hicks"]))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 19, in integer_validator
+    raise TypeError("{:s} must be an integer".format(name))
+TypeError: frozenset must be an integer
+
+>>> bg.integer_validator("bytes", b"bytes")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 19, in integer_validator
+    raise TypeError("{:s} must be an integer".format(name))
+TypeError: bytes must be an integer
+
+>>> bg.integer_validator("bytearrays", bytearray(b"bytes"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 19, in integer_validator
+    raise TypeError("{:s} must be an integer".format(name))
+TypeError: bytearrays must be an integer
+
+>>> bg.integer_validator()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> bg.integer_validator("integer")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg.integer_validator("integer", 4, 5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+>>> bg.integer_validator("my_int", 12)
+
+>>> bg.integer_validator("width", 89)
