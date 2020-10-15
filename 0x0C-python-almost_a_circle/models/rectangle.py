@@ -79,13 +79,16 @@ class Rectangle(Base):
         """prints the rectangle using #"""
         print("\n" * self.__y, end='')
         for i in range(self.__height):
-              print(' ' * self.__x, end='')
-              print('#' * self.__width)
+            print(' ' * self.__x, end='')
+            print('#' * self.__width)
 
     def __str__(self):
         """returns the print ans string rep of a rectangle"""
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
-                            self.__x, self.__y, self.__width, self.__height)
+                                                                 self.__x,
+                                                                 self.__y,
+                                                                 self.__width,
+                                                                 self.__height)
 
     def update(self, *args, **kwargs):
         """updates the rectangle"""
