@@ -5,6 +5,7 @@ a module of class base
 import json
 import csv
 
+
 class Base:
     """defines class as Base"""
 
