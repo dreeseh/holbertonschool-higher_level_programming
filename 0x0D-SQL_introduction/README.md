@@ -1,4 +1,4 @@
-# 0x0D. SQL - Introduction
+# index of 0x0D. SQL - Introduction
 
 ## Resources:books:
 Read or watch:
