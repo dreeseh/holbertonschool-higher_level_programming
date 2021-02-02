@@ -4,7 +4,7 @@
 const numberOne = parseInt(process.argv[2]);
 const numberTwo = parseInt(process.argv[3]);
 
-function add(numberOne, numberTwo) {
-    console.log(numberOne + numberTwo);
+function add (numberOne, numberTwo) {
+  console.log(numberOne + numberTwo);
 }
 add(numberOne, numberTwo);
