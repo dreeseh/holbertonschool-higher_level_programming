@@ -10,7 +10,7 @@ request(url, function (errorObj, response, body) {
   if (errorObj) {
     console.log(errorObj);
   } else {
-    let numOfMovies = JSON.parse(body).results;
+    const numOfMovies = JSON.parse(body).results;
     for (let i = 0; i < numOfMovies.length; i++) {
       for (let j = 0; j < numOfMovies[i].characters.length; j++) {
         if (numOfMovies[i].characters[j].search('/18/') > 0) {
