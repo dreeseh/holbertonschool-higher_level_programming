@@ -1,1 +1,0 @@
-index of holbertonschool-higher_level_programming
